@@ -76,7 +76,7 @@ close   --->  closes all directions (n, e, s, w, u, d) then locks each direction
 mex *   --->  creates custom exit *
 mr      --->  displays cexits for current room
 mclear  --->  removes custom exit database entrys for the current room
-mxs     --->  sets target room (the room you are in) for current area (requires winkle winkle's s&d - finger nokfah for mapper_extender update) 
+mxs     --->  sets target room (the room you are in) for current area (requires winkle winkle's s&d - finger nokfah for 'mapper_extender_2.xml' update) 
 ]]>
 </description>
 
