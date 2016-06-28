@@ -380,8 +380,8 @@ Note ("Hold Item Set To : ", "%1")</send>
    expand_variables="y"
    sequence="100"
   >
-  </alias>
   <send>put %1 @portals_bag</send>
+  </alias>
   <alias
    match="mget *"
    enabled="y"
