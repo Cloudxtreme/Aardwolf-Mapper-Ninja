@@ -17,7 +17,7 @@ Mapper Ninja  - Created 22/07/2015 by Lunk
    save_state="y"
    date_written="2015-07-22 20:42:19"
    requires="4.98"
-   version="1.5"
+   version="1.6"
    >
 <description trim="y">
 <![CDATA[
@@ -64,6 +64,8 @@ mhold       --->  displays hold item
 mlist       --->  lists all portal mapper database entrys
 mdel # *    --->  deletes portal entry * where * is the portal index (#)
 mlbag       --->  looks (examines) your portals bag to show which portals you have 
+mput *      --->  puts portal * into portal bag
+mget *      --->  gets portal * from portal bag
 mapper portal mpor *  --->  creates a mapper portal database entry with portal * (make sure you are in the portal's destination room !)
   
 *NOTE 1* : the # is necessary to indicate which portal to delete (the index of the database entry) so for example i wanted to delete portal at index 42 I would use : mpordel #42
@@ -371,6 +373,22 @@ Note ("Hold Item Set To : ", "%1")</send>
    sequence="100"
   >
   <send>examine @portals_bag</send>
+  </alias>
+    <alias
+   match="mput *"
+   enabled="y"
+   expand_variables="y"
+   sequence="100"
+  >
+  <send>put %1 @portals_bag</send>
+  <alias
+   match="mget *"
+   enabled="y"
+   expand_variables="y"
+   sequence="100"
+  >
+  <send>get %1 @portals_bag</send>
+  </alias>
   </alias>
   <alias
    match="open"
