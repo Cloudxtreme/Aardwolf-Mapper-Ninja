@@ -17,7 +17,7 @@ Mapper Ninja  - Created 22/07/2015 by Lunk
    save_state="y"
    date_written="2015-07-22 20:42:19"
    requires="4.98"
-   version="1.6"
+   version="1.61"
    >
 <description trim="y">
 <![CDATA[
@@ -380,6 +380,7 @@ Note ("Hold Item Set To : ", "%1")</send>
    expand_variables="y"
    sequence="100"
   >
+  </alias>
   <send>put %1 @portals_bag</send>
   <alias
    match="mget *"
@@ -388,7 +389,6 @@ Note ("Hold Item Set To : ", "%1")</send>
    sequence="100"
   >
   <send>get %1 @portals_bag</send>
-  </alias>
   </alias>
   <alias
    match="open"
